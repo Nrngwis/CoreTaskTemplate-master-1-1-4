@@ -1,0 +1,151 @@
+# Created at 2025-07-28T20:42:53.201
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (2072@DESKTOP-NK0S334):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@23.0.1/java.math.MutableBigInteger.divideMagnitude(MutableBigInteger.java:1504)
+        at java.base@23.0.1/java.math.MutableBigInteger.divideKnuth(MutableBigInteger.java:1208)
+        at java.base@23.0.1/java.math.MutableBigInteger.divide(MutableBigInteger.java:1134)
+        at java.base@23.0.1/java.math.MutableBigInteger.divide(MutableBigInteger.java:1128)
+        at java.base@23.0.1/java.math.BigInteger.oddModPow(BigInteger.java:3158)
+        at java.base@23.0.1/java.math.BigInteger.modPow(BigInteger.java:2921)
+        at java.base@23.0.1/sun.security.rsa.RSACore.crypt(RSACore.java:142)
+        at java.base@23.0.1/sun.security.rsa.RSACore.rsa(RSACore.java:108)
+        at java.base@23.0.1/sun.security.rsa.RSAPSSSignature.engineVerify(RSAPSSSignature.java:451)
+        at java.base@23.0.1/java.security.Signature$Delegate.engineVerify(Signature.java:1421)
+        at java.base@23.0.1/java.security.Signature.verify(Signature.java:789)
+        at java.base@23.0.1/sun.security.ssl.CertificateVerify$T13CertificateVerifyMessage.<init>(CertificateVerify.java:1013)
+        at java.base@23.0.1/sun.security.ssl.CertificateVerify$T13CertificateVerifyConsumer.consume(CertificateVerify.java:1166)
+        at java.base@23.0.1/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:393)
+        at java.base@23.0.1/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:476)
+        at java.base@23.0.1/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:447)
+        at java.base@23.0.1/sun.security.ssl.TransportContext.dispatch(TransportContext.java:206)
+        at java.base@23.0.1/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base@23.0.1/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507)
+        at java.base@23.0.1/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422)
+        at java.base@23.0.1/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+        at java.base@23.0.1/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+        at app//com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:317)
+        at app//com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:188)
+        at app//com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:97)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:333)
+        at app//com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:167)
+        at app//com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1350)
+        at app//com.mysql.cj.NativeSession.connect(NativeSession.java:157)
+        at app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+        at app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+        at app//com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+        at app//com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+        at app//com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+        at platform/java.sql@23.0.1/java.sql.DriverManager.getConnection(DriverManager.java:682)
+        at platform/java.sql@23.0.1/java.sql.DriverManager.getConnection(DriverManager.java:230)
+        at app//jm.task.core.jdbc.util.Util.getConnection(Util.java:17)
+        at app//jm.task.core.jdbc.service.UserServiceImpl.<init>(UserServiceImpl.java:20)
+        at app//UserServiceTest.<init>(UserServiceTest.java:10)
+        at java.base@23.0.1/java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(DirectMethodHandle$Holder)
+        at java.base@23.0.1/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@23.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.invokeImpl(DirectConstructorHandleAccessor.java:86)
+        at java.base@23.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+        at java.base@23.0.1/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+        at java.base@23.0.1/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)
+        at app//org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)
+        at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+        at app//org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+        at app//org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+        at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+        at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+        at app//org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+        at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+        at app//org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@23.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@23.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@23.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@23.0.1/java.lang.Object.wait0(Native Method)
+        at java.base@23.0.1/java.lang.Object.wait(Object.java:378)
+        at java.base@23.0.1/java.lang.Object.wait(Object.java:352)
+        at java.base@23.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+        at java.base@23.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@23.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@23.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+        at java.base@23.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@23.0.1/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23.0.1/java.lang.Thread.run(Thread.java:1575)
+        at java.base@23.0.1/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@23.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+        at java.base@23.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@23.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@23.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@23.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@23.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@23.0.1/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23.0.1/java.lang.Thread.run(Thread.java:1575)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@23.0.1/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@23.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:187)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@23.0.1/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23.0.1/java.lang.Thread.run(Thread.java:1575)
+
+"mysql-cj-abandoned-connection-cleanup" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@23.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+        at java.base@23.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+        at app//com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+        at java.base@23.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base@23.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@23.0.1/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23.0.1/java.lang.Thread.run(Thread.java:1575)
+
+
+
